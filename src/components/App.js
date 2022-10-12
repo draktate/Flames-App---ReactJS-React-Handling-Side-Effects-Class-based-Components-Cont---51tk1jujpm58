@@ -74,6 +74,13 @@ class App extends Component {
     calcRelationship(){
         let xelement =document.getElementById("answer");
 
+        if(this.state.inp1.trim().length==0 || this.state.inp2.trim().length==0)
+        {
+            xelement.innerText='Please Enter valid input';
+            return;
+        }
+
+
         xelement.innerText=this.matchString(this.state.inp1,this.state.inp2);
 
     }
