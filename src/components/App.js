@@ -72,8 +72,9 @@ class App extends Component {
     }
     
     calcRelationship(){
+        let xelement =document.getElementById("answer");
 
-        alert(this.matchString(this.state.inp1.toUpperCase(),this.state.inp2.toUpperCase()));
+        xelement.innerText=this.matchString(this.state.inp1,this.state.inp2);
 
     }
 
@@ -125,6 +126,7 @@ class App extends Component {
 
                <button data-testid="calculate_relationship" onClick={this.calcRelationship} >Calculate Relationship </button>
                <button data-testid="clear" onClick={this.clearFields} >Clear Inputs </button>
+               <h3 data-testid="answer" id="answer"> </h3>
 
 
             </div>
