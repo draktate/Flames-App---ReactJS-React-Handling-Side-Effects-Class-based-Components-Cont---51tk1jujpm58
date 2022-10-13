@@ -26,23 +26,33 @@ class App extends Component {
         //console.log("len1:", len1)
         //console.log("len2:", len2)
 
+       let astr1= [...str1];
+       let astr2= [...str2];
 
- 	    for (let i=0; i<str1.length; i++ )
+ 	    for (let i=0; i<astr1.length; i++ )
  	    {
-            //console.log("str1 charAt:", i, "=" , str1.charAt(i))
+            
+
 
 		    let found=false;
-		    for(let j=0; j<str2.length; j++)
+		    for(let j=0; j<astr2.length; j++)
 		    {
                 //console.log("str2 charAt:", j, "=" , str2.charAt(j))
 
   
-			    if(str1.charAt(i) ==str2.charAt(j) && !found)
+			    if(astr1[i] ==astr2[j] && !found)
 			    {
-                    //console.log(str1.charAt(i) , " is found")
+
 				    len1=len1-1;
 				    len2=len2-1;
+
 				    found=true;
+                    //console.log("astr2:", astr2);
+                    //console.log("removing char at:", j);
+
+                    astr2.splice(j,1);
+                    //console.log("astr2:", astr2); 
+
 				    break;
 			    }
   
